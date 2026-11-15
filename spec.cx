@@ -1,0 +1,151 @@
+import "std";
+
+func main() => {
+    printf("HelloWorld");
+
+    return 0;
+}
+
+
+// casting syntax
+
+float i = 0;
+
+
+(void** i::char i);
+
+// float i is now char i of the same length;
+
+// more verbose style
+
+int f = 0;
+
+union cast
+{
+    void** [f]::[char f];
+};
+
+// memory syntax
+
+void& malloc(sizeof[/*things to allocate*/]);
+void& free();
+
+void** address(/*memory address*/);
+
+// address shift right (sends data)
+
+void address(/*memory address*/) +> address(/*memory address*/);
+// address shift left (sends data)
+void address(/*memory address*/) <+ address(/*memory address*/);
+
+func /*identifier*/() => {};// function declaration
+
+func () => {}; // anonymous function declaration
+
+// types
+
+float /*identifier*/ // float32
+double /*identifier*/ // float64
+
+int /*identifier*/ // int32
+long /*identifier*/ // int 64
+
+bool /*identifier*/ // boolean
+
+char /*identifier*/ // single character
+
+var /*identifier*/ // generic variable (inferred)
+
+char_t /*identifier*/ // wide char (string)
+
+// reference cast
+
+var ref = register[/*function,struct,enum*/::(void**)ref];
+
+// union style
+
+union cast_2 
+{
+    var ref; 
+
+    ref = (void** var)::/*function,struct,enum*/;
+};
+
+// structs
+
+struct /*identifier*/ {};// struct declaration
+
+
+// enum 
+
+enum /*identifier*/ {};// enum declaration
+
+// operator list
+
+:= // assignment
+
+=: // comparison 
+
++ // addition
+
+- // subtraction
+
+* // multiplication (suffix: dereference)
+
+/ // division
+
+& // bitwise AND (suffix & prefix: reference)
+
+| // bitwise OR
+
+// for loop
+
+for(int i = 0; i <= 10; i++) {
+    printf("f");
+};
+
+// arrays
+
+int i := {}; // array of int32s
+
+long o := {}; // array of int64s
+
+float p := {}; // array of float32s
+
+double u := {}; // array of float64s
+
+char g := {}; // array of single characters
+
+char_t l := {}; // array of strings
+
+// union arrays
+
+union int32_array : int 
+{
+    {1,2,3,4}; // single
+    {1,2,{3,4}}; // double
+    {1,2,{3,4,{5,6}}}; // triple
+};
+
+union int64_array : long 
+{
+    {1,2,3,4}; // single 
+    {1,2,{3,4}}; // double
+    {1,2,{3,4,{5,6}}}; // triple
+};
+
+union float32_array : float 
+{
+    {1.0,2.0,3.0,4.0}; // single
+    {1.0,2.0,{3.0,4.0}}; // double
+    {1.0,2.0,{3.0,4.0,{5.0,6.0}}}; // triple
+};
+
+union float64_array : double 
+{
+    {1.00,2.00,3.00,4.00}; // single
+    {1.00,2.00,{3.00,4.00}}; // double
+    {1.00,2.00,{3.00,4.00,{5.00,6.00}}}; // triple
+};
+
+/** @region : RegionName */
