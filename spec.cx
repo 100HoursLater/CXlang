@@ -9,7 +9,7 @@ func main() => {
 
 // casting syntax
 
-float i = 0;
+float i := 0;
 
 
 (void** i::char i);
@@ -18,7 +18,7 @@ float i = 0;
 
 // more verbose style
 
-int f = 0;
+int f := 0;
 
 union cast
 {
